@@ -1,0 +1,9 @@
+{% extends 'core/base.html' %}
+
+
+{% block container %}
+<h1 class="col-sm-6 offset-sm-3">{{ todo.title }}</h1>
+<p> {{ todo.content }}</p>
+<a href="{% url 'home' %}" class="btn btn-primary">Anasayfa</a>
+
+{% endblock container %}
