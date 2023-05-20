@@ -12,6 +12,7 @@ class Category(models.Model):
 class Todo(models.Model):
     # category = models.FereignKey(Category, on_delete = models.CASCADE) #bunu kullanmıyoruz çünkü CASCADE yapınca
     #Category silindiğinde tüm ilişkili todolar da silinir..
+    
     title = models.CharField(max_length=200)
     content = models.TextField(blank=True, null=True)
     is_active = models.BooleanField(default=False)
