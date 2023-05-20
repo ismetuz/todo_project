@@ -5,18 +5,29 @@ from .models import Todo, Category
 
 class TodoAdmin(admin.ModelAdmin):
     list_display = [
+        'pk',
+        'category',
         'title',
         'is_active',
         'created_at',
-        'updated_at'
+        'updated_at',
+
     ]
     list_editable =[
-        'is_active'
+        'is_active',
+    ]
+    list_display_links = [
+        'pk',
+        'category',
+        'title'
     ]
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = [
         'title',
+        'slug',
+    ]
+    list_display_links = [
         'slug',
     ]
 
